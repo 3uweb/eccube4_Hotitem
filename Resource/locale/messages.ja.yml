@@ -1,0 +1,32 @@
+plugin_hotitem.admin.navi: 人気商品管理
+plugin_hotitem.admin.not_found: 人気商品が存在しません。
+plugin_hotitem.admin.register.success: 人気商品を登録しました。
+plugin_hotitem.admin.update.success: 人気商品を修正しました。
+plugin_hotitem.admin.delete.success: 人気商品を削除しました。
+plugin_hotitem.admin.delete.confirm: 人気商品を削除してもよろしいですか？
+plugin_hotitem.admin.type.product.not_found: 商品を追加してください。
+plugin_hotitem.admin.type.comment.placeholder: 説明文を入力してください(HTMLタグ使用可)。
+
+plugin_hotitem.admin.index.title: 人気商品管理
+plugin_hotitem.admin.index.subtitle: 人気商品内容設定
+plugin_hotitem.admin.index.total_num: <strong>%number% 件</strong> が該当しました
+plugin_hotitem.admin.index.col2: 商品画像
+plugin_hotitem.admin.index.col3: 商品名
+plugin_hotitem.admin.index.col4: 説明文
+plugin_hotitem.admin.index.delete.confirm: この人気商品を削除しても宜しいですか？
+plugin_hotitem.admin.notice: 項目の順番はドラッグ＆ドロップでも変更可能です。
+plugin_hotitem.admin.new: 人気商品を新規登録
+
+plugin_hotitem.admin.edit.title: 人気商品管理
+plugin_hotitem.admin.edit.subtitle: 人気商品内容設定
+plugin_hotitem.admin.edit.header: 人気商品情報
+plugin_hotitem.admin.edit.product: 商品
+plugin_hotitem.admin.edit.comment: 説明文
+plugin_hotitem.admin.edit.comment.help: （最大%number%文字）
+plugin_hotitem.admin.edit.existed: この商品はすでに人気商品として登録されています。
+plugin_hotitem.admin.edit.search: 商品の追加
+plugin_hotitem.admin.edit.product_search.header: 商品検索
+plugin_hotitem.admin.edit.product_search.button: 検索
+
+front.block.hotitem.title__en: Hot Item
+front.block.hotitem.title__ja: 人気商品

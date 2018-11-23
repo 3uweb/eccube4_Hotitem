@@ -1,0 +1,47 @@
+{#
+ * This file is part of the Hotitem Product plugin
+ *
+ * Copyright (C) 2016 LOCKON CO.,LTD. All Rights Reserved.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+#}
+{% set hotitem_products = repository('Plugin\\Hotitem4\\Entity\\HotitemProduct').getHotitemProduct %}
+
+<div class="ec-role">
+    <div class="ec-secHeading">
+        <span class="ec-secHeading__en">{{ 'front.block.hotitem.title__en'|trans }}</span>
+        <span class="ec-secHeading__line"></span>
+        <span class="ec-secHeading__ja">{{ 'front.block.hotitem.title__ja'|trans }}</span>
+    </div>
+    <div id="hotitem-swiper" class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- ▼item_list▼ -->
+            {% for HotitemProduct in hotitem_products %}
+                <div class="swiper-slide">
+                    <a href="{{ url('product_detail', {'id': HotitemProduct.Product.id}) }}">
+                        <img src="{{ asset(HotitemProduct.Product.mainFileName|no_image_product, "save_image") }}">
+                        {% if HotitemProduct.comment %}
+                        <p>{{ HotitemProduct.comment|raw|nl2br }}</p>
+                        {% endif %}
+                        <dl>
+                            <dt class="item_name">{{ HotitemProduct.Product.name }}</dt>
+                            <dd class="item_price">
+                                {% if HotitemProduct.Product.hasProductClass %}
+                                    {% if HotitemProduct.Product.getPrice02Min == HotitemProduct.Product.getPrice02Max %}
+                                        {{ HotitemProduct.Product.getPrice02IncTaxMin|price }}
+                                    {% else %}
+                                        {{ HotitemProduct.Product.getPrice02IncTaxMin|price }}
+                                    {% endif %}
+                                {% else %}
+                                    {{ HotitemProduct.Product.getPrice02IncTaxMin|price }}
+                                {% endif %}
+                            </dd>
+                        </dl>
+                    </a>
+                </div>
+            {% endfor %}
+            <!-- ▲item_list▲ -->
+        </div>
+    </div>
+</div>
